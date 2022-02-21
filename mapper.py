@@ -7,10 +7,12 @@ with open('./AFINN-en-165.txt') as f:
 	lines = f.readlines()
 	for line in lines:
 		line = line.strip()
-		(key, value) = line.split()
+		words = line.split()
+		value = words.pop()
+		key = " ".join(words)
 		dict[key] = value 
 
-for line in sys.sidin:
+for line in sys.stdin:
 	line = line.strip()
 	words = line.split()
 
