@@ -14,10 +14,9 @@ with open('~/AFINN-en-165.txt') as f:
 		key = " ".join(words)
 		dict[key] = value 
 
-# file_name = os.getenv('map_input_file')
-# names = file_name.split('_')
-# name =  file_name[0]
-name = 'wilson'
+file_name = os.getenv('map_input_file')
+names = file_name.split('_')
+name =  file_name[0]
 word_number = 0
 valence = 0
 for line in sys.stdin:
